@@ -73,4 +73,4 @@
 5. ソフトでダウンロードして解凍し終わったフォルダを開きます。
 6. 完了
 
-<img src="https://user-images.githubusercontent.com/85016704/171835977-dba7c199-4e8f-4c78-89af-47be418408aa.png" width="200" alt="こどもにやさしいウェブサイトlogo">　　<h1>ClosJel</h1>
+<img src="https://user-images.githubusercontent.com/85016704/171835977-dba7c199-4e8f-4c78-89af-47be418408aa.png" width="200" alt="こどもにやさしいウェブサイトlogo">
