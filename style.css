@@ -1,0 +1,184 @@
+/* all style */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&family=Noto+Sans:wght@200;300;400&display=swap');
+
+html {
+    font-weight: 300;
+    font-family: 'Noto Sans','Noto Sans JP';
+    background-color: whitesmoke;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* header style */
+#header {
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    top: 0;
+    text-align: center;
+  }
+  #header .header-inner {
+    height: 75px;
+    display: flex;
+    padding-right: 10%;
+    padding-left: 2.5%;
+  }
+  
+  #header .header-inner .logo {
+    flex-shrink: 0;
+    margin-right: 20px;
+    font-size: 20px;
+    padding-top: 10px;
+  }
+  
+  #navi {
+    width: 100%;
+  }
+
+  #header li {
+      list-style: none;
+  }
+  
+  #navi ul {
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+  
+  @media screen and (min-width: 989px) {
+    #navi ul {
+      display: flex;
+      text-align: center;
+    }
+    .phone {
+        display: none;
+    }
+  }
+  
+  #navi a {
+    height: 44px;
+    line-height: 44px;
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    padding: 0 10px;
+    opacity: 0.8;
+    transition: all 0.5s;
+  }
+  
+  #navi a:hover {
+    opacity: 1;
+  }
+  #drawer_input {
+    display: none !important;
+  }
+  
+  @media screen and (max-width: 989px) {
+  /*hamburger menu*/
+  
+  .drawer_open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
+  }
+  
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+  }
+  
+  .hamburger {
+    margin-top: 40px;
+    padding-right: 20px;
+  }
+  
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+  
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+    
+  /* メニューのデザイン*/
+  .nav_content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 100%;
+    left: 0%; /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: rgba(122, 122, 122, 0.918);
+    transition: .5s;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #navi a {
+    color: white;
+  }
+  
+  /* メニュー黒ポチを消す */
+  .nav_list {
+    list-style: none;
+  }
+  
+  .nav_item a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer_input:checked ~ .nav_content {
+    bottom: 0;
+  }
+}
+
+.selectbar {
+    background: white;
+    color: black;
+    border: solid 1.5px gray;
+    padding: 10px;
+}
+
+::selection {
+  background: rgb(255, 230, 0);
+  color: #313131;
+}
